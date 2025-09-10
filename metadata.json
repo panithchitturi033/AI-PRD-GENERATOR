@@ -1,0 +1,5 @@
+{
+  "name": "AI PRD Generator",
+  "description": "An application that takes a product idea as input and generates a comprehensive Product Requirements Document (PRD) using AI. The generated document is displayed in a structured, editable, and visually appealing format.",
+  "requestFramePermissions": []
+}
