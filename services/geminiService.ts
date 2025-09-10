@@ -2,11 +2,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { PRD } from '../types';
 
-if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable not set");
-}
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 const prdSchema = {
   type: Type.OBJECT,
   properties: {
@@ -71,6 +66,11 @@ const prdSchema = {
 
 
 export const generatePRD = async (idea: string): Promise<PRD> => {
+  if (!process.env.API_KEY) {
+    throw new Error("API_KEY environment variable not set");
+  }
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
   const prompt = `
     Based on the following product idea, generate a comprehensive Product Requirements Document (PRD).
     Act as a senior product manager creating a clear, concise, and well-structured document for your engineering and design teams.
