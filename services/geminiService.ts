@@ -1,12 +1,10 @@
 // services/geminiService.ts
 
+import { GoogleGenAI, Type } from "@google/genai";
 import type { PRD } from '../types';
 
-// Access the library from the window object
-const { GoogleGenAI, Type } = (window as any).google.generativeai;
-
 // --- START: Replace with your API Key ---
-const apiKey = "AIzaSyD0TmLVV1ZjAOxBR-yFUc9LmdHZlKNBmSM";
+const apiKey = "AIzaSyCNUUeGliJ5QC1ERWboLvQkimXJGavEzsU";
 // --- END: Replace with your API Key ---
 
 const prdSchema = {
